@@ -94,6 +94,8 @@ $("input.input_text").bind("blur", function() {
 
 $("div").hide();
 $("div").first().before("<ul></ul>");
-$("ul").first().html("<li>valami</li>");
+$("h2").each(function(){
+	$("ul").first().append("<li>" + $(this).text() + "</li>");
+});
 
 */
