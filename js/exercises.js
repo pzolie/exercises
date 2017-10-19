@@ -74,3 +74,26 @@ ajax exercise: specials
 - you may want to look at json/specials.json to see the format of the data you'll receive
  
 */
+/* 
+var $label = $("label").text();
+$("input.input_text").val($label);
+$("input.input_text").addClass("hint");
+$("label").remove();
+$("input.input_text").bind("focus", function() {
+	$(this).removeClass("hint");
+    $(this).val("");
+});
+$("input.input_text").bind("blur", function() {
+	if ($(this).val()=="") {
+		$(this).addClass("hint");
+   		$(this).val($label);	
+}
+});
+
+
+
+$("div").hide();
+$("div").first().before("<ul></ul>");
+$("ul").first().html("<li>valami</li>");
+
+*/
