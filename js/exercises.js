@@ -2,19 +2,27 @@
 selecting and traversing exercises
  
 - get the third list item (hint: eq())
-- change its color to red
+	var li3=$("li").eq(3);
+- change its color to red:
+	li3.css({'color' : 'red'});
 - change the color of the rest of the list items to blue
+	li3.nextAll().css({'color' : 'blue'});
 - *without doing another selection*, find the div.module
 and remove the class module
+	$(".without.doing.another.selection")("div").removeClass();
+	$("div").removeClass();
  
 - get the h1
+	$("h1");
 - store its text in a variable (hint: text())
+	var cim = $("h1").text();
 - use the stored text as the text for the first
 list item
- 
+	$("li:first").text(cim);
 bonus points:
 - change the background color of *every other*
 table row (hint: use :odd or :even)
+	$("table tr:even").css({'background-color' : 'lightgray'});
 */
 
 
@@ -22,6 +30,13 @@ table row (hint: use :odd or :even)
 manipulation exercises
  
 - add five new list items to the end of the unordered list (hint: for (i=0; i<5; i++) { ... } )
+
+$("#myList").function () {
+	var this = $(this);
+	for (var i=1; i<6; i++) {
+		this.append("<li>List item new " + i + "</li>");
+	}
+};
 - remove the odd list items (hint: .remove())
 - add another h2 and another paragraph to div.module
 - add a new div.module to the page after the existing one; put a copy of the existing unordered list inside it.
